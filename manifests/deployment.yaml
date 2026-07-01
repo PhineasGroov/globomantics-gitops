@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: globomantics
-    namespace: globomantics
+  name: globomantics
+  namespace: globomantics
 spec:
   replicas: 2
-  selector: 
+  selector:
     matchLabels:
       app: globomantics
-  template: 
-   metadata:
-     lables:
-       app: globomantics
-    specs:
+  template:
+    metadata:
+      labels:
+        app: globomantics
+    spec:
       containers:
-        - name: globomantics
-          image: nginx:1.27.5
-          ports:
-          - containerPort: 80
+      - name: globomantics
+        image: nginx:1.27.5
+        ports:
+        - containerPort: 80
